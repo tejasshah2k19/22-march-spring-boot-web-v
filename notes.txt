@@ -1,0 +1,18 @@
+create project 
+
+add port and view entry in application.prop file 
+
+
+spring -->  spring web --> webapp 
+
+controller --> logic --> 
+input / output --> jsp 
+
+
+spring -> you can not access jsp directly. 
+we create jsp inside WEB-INF 
+
+you can access via url[servlet] 
+
+spring starter -- boot project --- jsp -- jar -- tomcat embeded jasper we need to add   
+by default boot -> rest api --> json 
