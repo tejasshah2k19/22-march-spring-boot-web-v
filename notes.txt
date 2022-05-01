@@ -22,8 +22,16 @@ tomcat embeded jasper
 
 ---------------------------------
 validation :- 
-1) add hibernate validator dep 
+1) add hibernate validator dep [ remove version if it gives yellow warning in version ]* 
 2) add @NotBalnk annotation in UserBean
 3) verify/validate UserBean using @Valid annotation
 4) validation result can be store in BindingResult 
 5) check bindinResult for result and send appropriate response  
+
+we can get validation annotation from two package 
+1) hibernate
+2) javax. 
+
+we always use javax first 
+
+

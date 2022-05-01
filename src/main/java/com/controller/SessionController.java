@@ -1,6 +1,5 @@
 package com.controller;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
