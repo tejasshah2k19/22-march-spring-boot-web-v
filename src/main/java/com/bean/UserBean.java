@@ -1,11 +1,20 @@
 package com.bean;
 
+import javax.validation.constraints.NotBlank;
+
 public class UserBean {
 
 	private int userId;
+	
+	@NotBlank
 	private String firstName;
+	
+	@NotBlank
 	private String  email;
+	
+	@NotBlank
 	private String password;
+
 	public int getUserId() {
 		return userId;
 	}

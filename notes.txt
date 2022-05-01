@@ -20,4 +20,10 @@ if we have spring starter / boot project , we don't have support lib for jsp ,
 to support jsp in boot project we have to add 1 jar file in pom.xml 
 tomcat embeded jasper 
 
-
+---------------------------------
+validation :- 
+1) add hibernate validator dep 
+2) add @NotBalnk annotation in UserBean
+3) verify/validate UserBean using @Valid annotation
+4) validation result can be store in BindingResult 
+5) check bindinResult for result and send appropriate response  
