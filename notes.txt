@@ -10,9 +10,14 @@ input / output --> jsp
 
 
 spring -> you can not access jsp directly. 
-we create jsp inside WEB-INF 
+		 we create jsp inside WEB-INF/views  
 
-you can access via url[servlet] 
+if we want to access jsp , we can access via url[servlet] 
 
-spring starter -- boot project --- jsp -- jar -- tomcat embeded jasper we need to add   
-by default boot -> rest api --> json 
+
+
+if we have spring starter / boot project , we don't have support lib for jsp , 
+to support jsp in boot project we have to add 1 jar file in pom.xml 
+tomcat embeded jasper 
+
+
