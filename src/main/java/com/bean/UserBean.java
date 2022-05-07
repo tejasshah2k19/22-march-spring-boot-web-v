@@ -6,13 +6,13 @@ public class UserBean {
 
 	private int userId;
 	
-	@NotBlank
+	@NotBlank(message = "Please Enter FirstName")
 	private String firstName;
 	
-	@NotBlank
+	@NotBlank(message = "Please Enter Email")
 	private String  email;
 	
-	@NotBlank
+	@NotBlank(message = "Please Enter Password")
 	private String password;
 
 	public int getUserId() {

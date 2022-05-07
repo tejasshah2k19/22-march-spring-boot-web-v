@@ -34,4 +34,23 @@ we can get validation annotation from two package
 
 we always use javax first 
 
+-----------------
+custom tag  --> spring form 
+
+<form> html 
+<s:form> spring 
+
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
 
