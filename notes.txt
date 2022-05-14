@@ -42,7 +42,26 @@ custom tag  --> spring form
 
 -----------------
 
+bean 
+validation 
 
+-----------------
+spring boot --> .xml 
+
+db -> url username password 
+
+1) db driver [pg] [maven -> pom.xml ] 
+2) spring boot starter jdbc [maven] 
+3) add configuration of database in application.properties 
+
+Connection open close 
+Statement** 
+PreparedStatement 
+-----------------------------------
+role -> role table [ roleid ,rolename] 
+1)RoleBean -> roleId roleName -> getters setters 
+2)RoleController --> @Controller 
+3)In RoleController -> create a method which helps to scan data [jsp]  
 
 
 

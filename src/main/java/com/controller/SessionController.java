@@ -16,7 +16,8 @@ import com.bean.UserBean;
 public class SessionController {
 	// singleton design pattern
 	// life-cycle - ioc container
-
+ 
+	
 	// signup
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signup(Model model) {
