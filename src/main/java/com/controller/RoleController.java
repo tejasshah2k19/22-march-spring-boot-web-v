@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,4 +46,14 @@ public class RoleController {
 			return "";
 		}
 	}
+
+	@GetMapping("/listroles")
+	public String listRoles(Model model) {
+
+		// data => dao
+		List<RoleBean> roles = roleDao.getAllRoles();//user admin member
+		model.addAttribute("roles",roles);
+		return "ListRole";// jsp
+	}
+
 }
