@@ -21,10 +21,11 @@ public class UserController {
 	}
 
 	@PostMapping("/saveprofile")
-	public String saveProfile(@RequestParam("profile") MultipartFile file) {
+	public String saveProfile(@RequestParam("profile") MultipartFile file, @RequestParam("title") String title) {
 		System.out.println(file.getOriginalFilename());
 		System.out.println(file.getSize());
 
+		System.out.println(title);
 		File dir = new File("E:\\Tejas Shah\\Dropbox\\boot\\22-may-spring-boot-v\\src\\main\\resources\\static\\");
 		File p = new File(dir, file.getOriginalFilename());
 
@@ -46,7 +47,7 @@ public class UserController {
 
 		File f = new File("E:\\Tejas Shah\\Dropbox\\boot\\22-may-spring-boot-v\\src\\main\\resources\\static\\");
 		String allFiles[] = f.list(); // String[] filenames
-		model.addAttribute("allFiles",allFiles);
+		model.addAttribute("allFiles", allFiles);
 		return "AllImg";
 	}
 

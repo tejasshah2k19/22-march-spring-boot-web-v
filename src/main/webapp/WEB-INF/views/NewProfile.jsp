@@ -10,7 +10,7 @@
 
 	<form action="saveprofile" method="post" enctype="multipart/form-data">
 
-
+		Title:<input type="text" name="title">
 		ProfilePic: <input type="file" name="profile"><br> <input
 			type="submit" value="Upload Profile">
 	</form>
