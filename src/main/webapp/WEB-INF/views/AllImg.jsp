@@ -8,26 +8,20 @@
 <meta charset="ISO-8859-1">
 </head>
 <body>
-	<h2>List Roles</h2>
+	<h2>All Images</h2>
 
 	<table border="1">
 		<tr>
-			<th>RoleId</th>
-			<th>RoleName</th>
-			<th>Action</th>
+			<td>File</td>
 		</tr>
-		<c:forEach items="${roles}" var="r">
+
+		<c:forEach items="${allFiles}" var="i">
 			<tr>
-				<td>${r.roleId }</td>
-				<td>${r.roleName}</td>
-				<td><a href=""> Delete</a></td>
+				<tD><img src="${i}" height="100px" width="100px" /></tD>
 			</tr>
 		</c:forEach>
+
 	</table>
-
-
-
-
 
 </body>
 </html>

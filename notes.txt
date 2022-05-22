@@ -62,10 +62,23 @@ role -> role table [ roleid ,rolename]
 1)RoleBean -> roleId roleName -> getters setters 
 2)RoleController --> @Controller 
 3)In RoleController -> create a method which helps to scan data [jsp]  
+-----------------------------------
 
+file  uploading 
 
-
-
+	image /profile pic 
+	document 
+	all type of files 
+	
+	
+	image --> db server --> 
+	image --> folders --> path --> db 
+	
+	how to upload 
+	
+	fileupload:- 
+1)  commons-io 
+2) 	commons-fileupload
 
 
 
