@@ -21,7 +21,7 @@ public class UserController {
 
 	@Autowired
 	UploadService uploadService;
-	
+	 
 	@Autowired
 	UserDao userDao;
 
