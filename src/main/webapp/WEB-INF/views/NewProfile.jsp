@@ -10,9 +10,11 @@
 
 	<form action="saveprofile" method="post" enctype="multipart/form-data">
 
-		Title:<input type="text" name="title">
-		ProfilePic: <input type="file" name="profile"><br> <input
-			type="submit" value="Upload Profile">
+		FirstName: <input type="text" name="firstName"><br>
+		<br> Email:<input type="text" name="email"><br>
+		<br> Password:<input type="password" name="password"><br>
+		<br> ProfilePic: <input type="file" name="profilePic"><br>
+		<br> <input type="submit" value="Upload Profile">
 	</form>
 
 </body>

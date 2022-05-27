@@ -15,6 +15,8 @@ public class UserBean {
 	@NotBlank(message = "Please Enter Password")
 	private String password;
 
+	private String profile;
+	
 	public int getUserId() {
 		return userId;
 	}
@@ -39,7 +41,11 @@ public class UserBean {
 	public void setPassword(String password) {
 		this.password = password;
 	} 
-
-
+	public String getProfile() {
+		return profile;
+	}
+	public void setProfile(String profile) {
+		this.profile = profile;
+	}
 	
 }
