@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.bean.UserBean;
 import com.dao.UserDao;
+import com.service.EmailService;
 import com.service.UploadService;
 
 @Controller
@@ -24,6 +25,10 @@ public class UserController {
 	 
 	@Autowired
 	UserDao userDao;
+	
+	
+	@Autowired
+	EmailService emailService;
 
 	// create 1 url for input type file
 	@GetMapping("newprofile")
@@ -41,6 +46,7 @@ public class UserController {
 		if(isUpload) {
 			user.setProfile(user.getEmail()+"/"+file.getOriginalFilename());
 			userDao.insertUser(user);
+			emailService.welcomeEmail(user);
 		}
 		return "Success";
 	}
