@@ -1,29 +1,22 @@
 package com.service;
 
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Properties;
 
 import javax.mail.Authenticator;
 import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
 
 import org.springframework.stereotype.Service;
-
-import com.bean.UserBean;
 
 @Service
 public class EmailService {
 
-	public void welcomeEmail(UserBean user) {
+	public void sendEmailForForgetPassword(String email, String otp) {
+
 		final String from = "tejasshah2k19@gmail.com";// from address
 		final String appPassword = "bfngzdwelyzbfmld"; // tejas123
 
@@ -49,16 +42,10 @@ public class EmailService {
 			MimeMessage message = new MimeMessage(session);
 
 			message.setFrom(from);
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(user.getEmail()));
-			message.setSubject("Welcome");
-//			message.setContent("Welcome to Bingo.com");
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
+			message.setSubject("Your OTP For Reset Password");
+			message.setContent("Your OTP is : " + otp, "text/html");
 
-			Multipart mp = new MimeMultipart();
-			MimeBodyPart bodyMessagePart = new MimeBodyPart();
-			bodyMessagePart.setContent("body", "UTF-8");
-			mp.addBodyPart(bodyMessagePart);
-
-			message.setContent(mp);
 			Transport.send(message);
 
 			System.out.println("email sent.............");
@@ -66,9 +53,5 @@ public class EmailService {
 			e.printStackTrace();
 			System.out.println("something went wrong...........");
 		}
-	}
-
-	public void forgetPasswordEmail(UserBean user) {
-
 	}
 }
