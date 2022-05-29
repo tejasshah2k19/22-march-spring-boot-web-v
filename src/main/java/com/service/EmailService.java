@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailService {
 
-	public void sendEmailForForgetPassword(String email, String otp) {
+	public void sendEmailForForgetPassword(String email) {
 
 		final String from = "tejasshah2k19@gmail.com";// from address
 		final String appPassword = "bfngzdwelyzbfmld"; // tejas123
@@ -43,8 +43,8 @@ public class EmailService {
 
 			message.setFrom(from);
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
-			message.setSubject("Your OTP For Reset Password");
-			message.setContent("Your OTP is : " + otp, "text/html");
+			message.setSubject("Welcome");
+			message.setContent("Welcome to bingo.com", "text/html");
 
 			Transport.send(message);
 
