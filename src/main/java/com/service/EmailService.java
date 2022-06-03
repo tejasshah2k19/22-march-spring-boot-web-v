@@ -34,7 +34,7 @@ public class EmailService {
 				// TODO Auto-generated method stub
 				return new PasswordAuthentication(from, appPassword);
 			}
-		});
+		});	
 
 		session.setDebug(true);
 
