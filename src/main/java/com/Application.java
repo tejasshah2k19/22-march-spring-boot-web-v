@@ -16,7 +16,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableWebMvc
-@EnableSwagger2
 @SpringBootApplication
 public class Application {
 
@@ -26,8 +25,8 @@ public class Application {
 
 	@Bean
 	public Docket generateMyDoc() {
-		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com"))
-				.build().apiInfo(metaData());
+		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com")).build()
+				.apiInfo(metaData());
 	}
 
 	private ApiInfo metaData() {
