@@ -46,7 +46,7 @@ public class UserController {
 		if(isUpload) {
 			user.setProfile(user.getEmail()+"/"+file.getOriginalFilename());
 			userDao.insertUser(user);
-			emailService.welcomeEmail(user);
+//			emailService.welcomeEmail(user);
 		}
 		return "Success";
 	}
